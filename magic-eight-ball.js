@@ -20,25 +20,30 @@ const notSureArray = ['Reply hazy, try again.', 'Ask again later', 'Better not t
 //Create variable for final message
 let message;
 
+//index generating function
+const generateRandIndex = (array) => {
+    return Math.floor(Math.random() * array.length);
+}
+
 
 if (result === true) { //if "win" (50% odds)
 //create indexes for winning and try again arrays
-    let congratsIndex = Math.floor(Math.random() * congratsArray.length);
-    let winIndex = Math.floor(Math.random() * winArray.length);
-    let tryAgainIndex = Math.floor(Math.random() * tryAgainWin.length);
+    let congratsIndex = generateRandIndex(congratsArray);
+    let winIndex = generateRandIndex(winArray);
+    let tryAgainIndex = generateRandIndex(tryAgainWin);
     //generate message
     message = congratsArray[congratsIndex] + " " + winArray[winIndex] +  " " + tryAgainWin[tryAgainIndex];
 } else { //if "lose" (50% odds)
 //create indexes for losing and try again arrays
     let hazy = Math.random() < 0.5;
     if (hazy === false) { //if lose (25% odds)
-        let sorryIndex = Math.floor(Math.random() * sorryArray.length);
-        let loseIndex = Math.floor(Math.random() * loseArray.length);
-        let tryAgainIndex = Math.floor(Math.random() * tryAgainLose.length);
+        let sorryIndex = generateRandIndex(sorryArray);
+        let loseIndex = generateRandIndex(loseArray);
+        let tryAgainIndex = generateRandIndex(tryAgainLose);
         //generate message
         message = sorryArray[sorryIndex] + " " + loseArray[loseIndex] + " " + tryAgainLose[tryAgainIndex];
     } else { //if non-commital (25%)
-        let notSureIndex = Math.floor(Math.random() * notSureArray.length);
+        let notSureIndex = generateRandIndex(notSureArray);
         message = notSureArray[notSureIndex]
     }
     
