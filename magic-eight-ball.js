@@ -1,10 +1,10 @@
 //Super Magic Eight Ball
 
-//The original 8 ball had 20 answers, 10 affirmative, 5 non-commital, and 5 negative
+//The original 8 ball had 20 answers, 10 affirmative, 5 non-committal, and 5 negative
 //Super Magic Eight ball is both more verbose and scalable, but attempts to have around the same odds.
 
 
-//Generate result
+//Generate win (50%) or "losing" (25% don't know, 25% lose)
 const result = Math.random() < 0.5;
 
 
@@ -33,7 +33,7 @@ if (result === true) { //if "win" (50% odds)
     let tryAgainIndex = generateRandIndex(tryAgainWin);
     //generate message
     message = congratsArray[congratsIndex] + " " + winArray[winIndex] +  " " + tryAgainWin[tryAgainIndex];
-} else { //if "lose" (50% odds)
+} else { //if "losing" (50% odds)
 //create indexes for losing and try again arrays
     let hazy = Math.random() < 0.5;
     if (hazy === false) { //if lose (25% odds)
