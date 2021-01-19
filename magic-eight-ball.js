@@ -1,7 +1,7 @@
 //Super Magic Eight Ball
 
 //The original 8 ball had 20 answers, 10 affirmative, 5 non-committal, and 5 negative
-//Super Magic Eight ball is both more verbose and scalable, but attempts to have around the same odds.
+//Super Magic Eight ball is both more verbose and scalable, but attempts to have the same odds.
 
 
 //Generate win (50%) or "losing" (25% don't know, 25% lose)
@@ -14,8 +14,8 @@ const sorryArray = ['Ouch!', 'Sorry!', 'Too bad!', 'Oh no!', 'Sad day.', 'Awe!',
 const winArray = [`It's a slam dunk!`, 'From my angle, yes!', 'Seems likely.', '','It is certain.', 'You may rely on it.', 'Outlook good.', 'Most likely', 'Yes - definitely', 'Signs point to yes!'];
 const loseArray = [`Don't count on it.`, `Very doubtful.`, `My sources say no.`, `My reply is no`, `Outlook not so good`];
 const tryAgainWin = [`Don't get too cocky!`, `Stay the course!`, `Keep it up!`, 'Hope your luck remains!', 'This too shall pass'];
-const tryAgainLose = [`Better luck next time!`, `This too shall pass.`, `Keep your head up!`, `Don't quit now!`, `Everyone has a down day! Get some rest!`]
-const notSureArray = ['Reply hazy, try again.', 'Ask again later', 'Better not tell you now', 'Cannot predict now.', 'Concentrate and ask again.']
+const tryAgainLose = [`Better luck next time!`, `This too shall pass.`, `Keep your head up!`, `Don't quit now!`, `Everyone has a down day! Get some rest!`];
+const notSureArray = ['Reply hazy, try again.', 'Ask again later', 'Better not tell you now', 'Cannot predict now.', 'Concentrate and ask again.'];
 
 //Create variable for final message
 let message;
@@ -26,7 +26,8 @@ const generateRandIndex = (array) => {
 }
 
 
-if (result === true) { //if "win" (50% odds)
+const shakeEightBall = () => {
+    if (result === true) { //if "win" (50% odds)
 //create indexes for winning and try again arrays
     let congratsIndex = generateRandIndex(congratsArray);
     let winIndex = generateRandIndex(winArray);
@@ -49,5 +50,6 @@ if (result === true) { //if "win" (50% odds)
     
 
 }
+    document.getElementById("answer").innerHTML = 'Answer:' + message;
+}
 
-console.log(message);
