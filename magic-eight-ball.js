@@ -31,25 +31,25 @@ const shakeEightBall = () => {
     //Create variable for final message
     let message;
 
-    if (result === true) { //if "win" (50% odds)
-//create indexes for winning and try again arrays
-    let congratsIndex = generateRandIndex(congratsArray);
-    let winIndex = generateRandIndex(winArray);
-    let tryAgainIndex = generateRandIndex(tryAgainWin);
-    //generate message
-    message = congratsArray[congratsIndex] + " " + winArray[winIndex] +  " " + tryAgainWin[tryAgainIndex];
-} else { //if "losing" (50% odds)
-//create indexes for losing and try again arrays
-    let hazy = Math.random() < 0.5;
-    if (hazy === false) { //if lose (25% odds)
+    if (result === true) {  //if "win" (50% odds)
+            //create indexes for winning and try again arrays
+        let congratsIndex = generateRandIndex(congratsArray);
+        let winIndex = generateRandIndex(winArray);
+        let tryAgainIndex = generateRandIndex(tryAgainWin);
+            //generate message
+        message = congratsArray[congratsIndex] + " " + winArray[winIndex] +  " " + tryAgainWin[tryAgainIndex];
+    } else {    //if "losing" (50% odds)
+                //create indexes for losing and try again arrays
+        let hazy = Math.random() < 0.5;
+        if (hazy === false) { //if lose (25% odds)
         let sorryIndex = generateRandIndex(sorryArray);
         let loseIndex = generateRandIndex(loseArray);
         let tryAgainIndex = generateRandIndex(tryAgainLose);
-        //generate message
-        message = sorryArray[sorryIndex] + " " + loseArray[loseIndex] + " " + tryAgainLose[tryAgainIndex];
-    } else { //if non-commital (25%)
-        let notSureIndex = generateRandIndex(notSureArray);
-        message = notSureArray[notSureIndex]
+                //generate message
+            message = sorryArray[sorryIndex] + " " + loseArray[loseIndex] + " " + tryAgainLose[tryAgainIndex];
+        } else { //if non-commital (25%)
+            let notSureIndex = generateRandIndex(notSureArray);
+            message = notSureArray[notSureIndex]
     }
     
 
