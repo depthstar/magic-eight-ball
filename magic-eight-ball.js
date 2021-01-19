@@ -54,6 +54,6 @@ const shakeEightBall = () => {
     
 
 }
-    document.getElementById("answer").innerHTML = 'Answer:' + message;
+    document.getElementById("answer").innerHTML = 'Answer: ' + message;
 }
 
