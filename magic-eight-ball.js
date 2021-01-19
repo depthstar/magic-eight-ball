@@ -47,7 +47,7 @@ const shakeEightBall = () => {
         let tryAgainIndex = generateRandIndex(tryAgainLose);
                 //generate message
             message = sorryArray[sorryIndex] + " " + loseArray[loseIndex] + " " + tryAgainLose[tryAgainIndex];
-        } else { //if non-commital (25%)
+        } else { //if non-committal (25%)
             let notSureIndex = generateRandIndex(notSureArray);
             message = notSureArray[notSureIndex]
     }
