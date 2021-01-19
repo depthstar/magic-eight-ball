@@ -4,8 +4,7 @@
 //Super Magic Eight ball is both more verbose and scalable, but attempts to have the same odds.
 
 
-//Generate win (50%) or "losing" (25% don't know, 25% lose)
-const result = Math.random() < 0.5;
+
 
 
 //Arrays with answer components
@@ -17,16 +16,21 @@ const tryAgainWin = [`Don't get too cocky!`, `Stay the course!`, `Keep it up!`, 
 const tryAgainLose = [`Better luck next time!`, `This too shall pass.`, `Keep your head up!`, `Don't quit now!`, `Everyone has a down day! Get some rest!`];
 const notSureArray = ['Reply hazy, try again.', 'Ask again later', 'Better not tell you now', 'Cannot predict now.', 'Concentrate and ask again.'];
 
-//Create variable for final message
-let message;
+
 
 //index generating function
 const generateRandIndex = (array) => {
     return Math.floor(Math.random() * array.length);
 }
 
-
+//game function
 const shakeEightBall = () => {
+    //Generate win (50%) or "losing" (25% don't know, 25% lose)
+    const result = Math.random() < 0.5;
+
+    //Create variable for final message
+    let message;
+
     if (result === true) { //if "win" (50% odds)
 //create indexes for winning and try again arrays
     let congratsIndex = generateRandIndex(congratsArray);
