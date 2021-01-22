@@ -15,12 +15,13 @@ p {
     border:white;
     text-align: center;
     font-size: 14px;
-    position: relative;
-    bottom: 180px;
+    position: absolute;
+    bottom: ;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 80px;
+    width: 100%;
+
 
 }
 
@@ -31,8 +32,16 @@ button {
     border: none;
     color: white;
     padding: 20px 50px;
+    border-radius: 5px;
     
 }
+
+button:hover {
+    background-color:blue;
+    color: lightblue;
+    box-shadow: 10px 10px 0 #5e187e;
+}
+
 .center {
     display: block;
     margin-left: auto;
