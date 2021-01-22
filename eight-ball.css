@@ -1,9 +1,41 @@
 body {
-    font-family: Calibri;
+    font-family:"Potta One";
     background-color: black;
+    margin: 0 auto;
 }
 
 h2,
 p {
     color: white;
+    text-align: center;
 }
+
+#answer {
+    
+    border:white;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80px;
+
+}
+
+button {
+    font-family: "Potta One";
+    font-size: 28px;
+    background-color: darkblue;
+    border: none;
+    color: white;
+    padding: 20px 50px;
+    
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+  }
