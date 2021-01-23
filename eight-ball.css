@@ -10,19 +10,21 @@ p {
     text-align: center;
 }
 
+#eightball {
+    position: relative;
+    top: 60px;
+}
+
 #answer {
     
     border:white;
     text-align: center;
-    font-size: 14px;
+    font-size: 40px;
     position: absolute;
-    bottom: ;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
 }
 
 button {
@@ -39,7 +41,7 @@ button {
 button:hover {
     background-color:blue;
     color: lightblue;
-    box-shadow: 10px 10px 0 #5e187e;
+    box-shadow: 0px 0px 0 #5e187e;
 }
 
 .center {
