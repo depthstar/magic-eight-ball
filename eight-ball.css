@@ -12,19 +12,31 @@ p {
 
 #eightball {
     position: relative;
-    top: 60px;
+    width: 100%; 
+    height: auto;
+
 }
 
-#answer {
+.container {
+    height: auto;
+    width: 50%;
+    border:1px solid white;
+    position: relative;
+    left: 25%;
+}
+
+.container #answer {
     
-    border:white;
+    border:1px solid white;
+    height: 200px;
+    width: 200px;
     text-align: center;
-    font-size: 40px;
+    font-size: 32px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+
 }
 
 button {
