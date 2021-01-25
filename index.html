@@ -18,6 +18,26 @@
         <script src="magic-eight-ball.js"></script>
         <p id="answer"></p>
     </div>
+    <div class="customizer">
+        <select name="custom" id="custom">
+            <option value="numerical">Numerical Die Roll</option>
+            <option value="headstails">Heads or Tails</option>
+            <option value="twentyquestions">Twenty Questions!</option>
+          </select>
+        <input type="range" min="2" max="36" value="6" class="slider" id="myRange">
+        <p>D<span id="demo"></span></p>
+        <script>
+            var slider = document.getElementById("myRange");
+            var output = document.getElementById("demo");
+            output.innerHTML = slider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+} 
+        </script>
+    </div>
 </body>
+
 
 </html> 
