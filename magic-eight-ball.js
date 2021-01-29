@@ -19,6 +19,15 @@ const generateRandIndex = (array) => {
     return Math.floor(Math.random() * array.length);
 }
 
+//Show other options for ball content after first click
+
+let customizer = document.getElementById("customizer")
+
+const revealOptions = () => {
+    customizer.style.display = "block";
+}
+
+
 //game function
 const shakeEightBall = () => {
     //Generate win (50%) or "losing" (25% don't know, 25% lose)
@@ -47,5 +56,6 @@ const shakeEightBall = () => {
 
 }
     document.getElementById("answer").innerHTML = message;
+    revealOptions();
 }
 
